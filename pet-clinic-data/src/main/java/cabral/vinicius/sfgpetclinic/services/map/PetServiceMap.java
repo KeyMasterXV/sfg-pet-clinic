@@ -2,9 +2,11 @@ package cabral.vinicius.sfgpetclinic.services.map;
 
 import cabral.vinicius.sfgpetclinic.model.Pet;
 import cabral.vinicius.sfgpetclinic.services.PetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
 
     @Override

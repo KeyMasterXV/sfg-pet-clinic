@@ -2,22 +2,20 @@ package cabral.vinicius.sfgpetclinic.bootstrap;
 
 import cabral.vinicius.sfgpetclinic.model.Owner;
 import cabral.vinicius.sfgpetclinic.model.Vet;
-import cabral.vinicius.sfgpetclinic.services.CrudService;
+import cabral.vinicius.sfgpetclinic.services.OwnerService;
 import cabral.vinicius.sfgpetclinic.services.VetService;
-import cabral.vinicius.sfgpetclinic.services.map.OwnerServiceMap;
-import cabral.vinicius.sfgpetclinic.services.map.VetServiceMap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 @Component
 public class DataLoader implements CommandLineRunner {
 
-    private final CrudService ownerService;
+    private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override

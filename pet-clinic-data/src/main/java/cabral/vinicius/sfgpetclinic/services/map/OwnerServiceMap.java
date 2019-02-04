@@ -2,9 +2,11 @@ package cabral.vinicius.sfgpetclinic.services.map;
 
 import cabral.vinicius.sfgpetclinic.model.Owner;
 import cabral.vinicius.sfgpetclinic.services.OwnerService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
     @Override
