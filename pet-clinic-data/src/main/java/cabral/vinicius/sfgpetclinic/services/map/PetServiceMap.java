@@ -1,11 +1,11 @@
 package cabral.vinicius.sfgpetclinic.services.map;
 
 import cabral.vinicius.sfgpetclinic.model.Pet;
-import cabral.vinicius.sfgpetclinic.services.CrudService;
+import cabral.vinicius.sfgpetclinic.services.PetService;
 
 import java.util.Set;
 
-public class PetServiceMap extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long> {
+public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
 
     @Override
     public Set<Pet> findAll() {
