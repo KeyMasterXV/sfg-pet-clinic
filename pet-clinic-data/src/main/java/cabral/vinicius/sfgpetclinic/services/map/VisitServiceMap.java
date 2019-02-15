@@ -2,10 +2,12 @@ package cabral.vinicius.sfgpetclinic.services.map;
 
 import cabral.vinicius.sfgpetclinic.model.Visit;
 import cabral.vinicius.sfgpetclinic.services.VisitService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-public class VisitMapService extends AbstractMapService<Visit, Long> implements VisitService {
+@Service
+public class VisitServiceMap extends AbstractServiceMap<Visit, Long> implements VisitService {
 
     @Override
     public Set<Visit> findAll() {
