@@ -1,5 +1,6 @@
 package cabral.vinicius.sfgpetclinic.model;
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -16,7 +17,7 @@ import java.util.Set;
 @Table(name = "owners")
 public class Owner extends Person {
 
-//    @Builder
+    @Builder
     public Owner(Long id, String firstName, String lastName, String address, String city, String phone, Set<Pet> pets) {
         super(id, firstName, lastName);
         this.address = address;
